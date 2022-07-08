@@ -1,6 +1,9 @@
-import { View, Text } from "react-native";
-import Home from "./screens/Home";
+import * as React from "react";
+import RootNavigation from "./navigation";
+import 'react-native-gesture-handler';
 
 export default function App() {
-  return <Home />;
+  return (
+      <RootNavigation />
+  );
 }
