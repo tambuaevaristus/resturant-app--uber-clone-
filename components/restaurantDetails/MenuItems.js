@@ -6,63 +6,63 @@ import { useDispatch } from "react-redux";
 
 const foods = [
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce1",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce2",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce3",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce4",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce5",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce6",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce7",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce8",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGttoVRq2H2QFUDfmTQQBhdHDaIfOIeZW9KYG5SP4Y0KwOsL86pMNDLwm7YUegeunuwZ4&usqp=CAU",
   },
   {
-    title: "Chicken Saurce",
+    title: "Chicken Saurce9",
     description: "this is high quality chicken saurce",
     price: "5000FCFA",
     image:

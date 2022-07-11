@@ -23,7 +23,10 @@ let cartReducer = (state = defaultState,action)=>{
                     ...newState.selectedItems.items.filter((item)=> item.title != action.payload.title),
                 ],
                 restaurantName: action.payload.restaurantName
+                
                }
+               console.log(newState, "=>");
+               return newState;
 
             };
             
