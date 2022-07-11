@@ -77,7 +77,7 @@ const MenuItems = ({ restaurantName }) => {
       type: "ADD_TO_CART",
       payload: {
         ...item,
-        restaurantName: restaurantName,
+         restaurantName: restaurantName,
         checkboxValue: checkboxValue,
       },
     });
