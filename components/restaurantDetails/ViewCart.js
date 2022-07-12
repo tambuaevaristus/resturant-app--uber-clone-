@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { TextInput } from "react-native-gesture-handler";
 import OrderItem from "./OrderItem";
+import { db } from "../../firebase";
+import { collection, addDoc, getFirestore } from "firebase/firestore"; 
+
 
 export default function ViewCart() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -17,6 +20,20 @@ export default function ViewCart() {
     style: "currency",
     currency: "FCFA",
   });
+
+const addOrderToFireBase = async()=>{
+  // const db = getFirestore(app);
+  const ordersRef =await addDoc(collection(db, "orders"), {
+    items: items,
+    restaurantName: restaurantName,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+  }).then(()=>{
+    console.log("Orders added successfully");
+  });
+    
+
+  setModalVisible(false);
+};
 
   const style = StyleSheet.create({
     modalContainer: {
@@ -75,7 +92,7 @@ export default function ViewCart() {
                 position: "relative",
               }}
 
-              onPress={()=>setModalVisible(false) }
+              onPress={()=> {addOrderToFireBase()} }
             >
               <Text style={{color:"white", fontSize: 20}}>Checkout</Text>
             </TouchableOpacity>
