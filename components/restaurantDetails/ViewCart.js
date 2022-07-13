@@ -4,12 +4,14 @@ import { useSelector } from "react-redux";
 import { TextInput } from "react-native-gesture-handler";
 import OrderItem from "./OrderItem";
 import { db } from "../../firebase";
-import { collection, addDoc, getFirestore } from "firebase/firestore"; 
-
+import { collection, addDoc, setDoc, doc, getFirestore } from "firebase/firestore";
+import { format } from "date-fns";
 
 export default function ViewCart() {
   const [modalVisible, setModalVisible] = useState(false);
 
+  const orderRef = collection(db, "orders");
+  const antherCollection = collection(db, "month");
   const { items, restaurantName } = useSelector(
     (state) => state.cartReducer.selectedItems
   );
@@ -21,19 +23,34 @@ export default function ViewCart() {
     currency: "FCFA",
   });
 
-const addOrderToFireBase = async()=>{
-  // const db = getFirestore(app);
-  const ordersRef =await addDoc(collection(db, "orders"), {
-    items: items,
-    restaurantName: restaurantName,
-    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-  }).then(()=>{
-    console.log("Orders added successfully");
-  });
-    
+  const addOrderToFireBase = () => {
+    // const db = getFirestore(app);
+    addDoc(orderRef, {
+      items: {items},
+      restaurantName: restaurantName,
+      // createdAt: db.FieldValue.serverTimestamp(),
+    }).then(() => {
+      console.log("Added");
+    });
 
-  setModalVisible(false);
-};
+    console.log("working");
+    setModalVisible(false);
+  };
+
+
+  const addCollection = async()=>{
+    const variable = format(Date.now(), "MMM");
+
+    // setDoc(doc(db, 'orders', variable)).collection(variable, "newCollection");
+
+    await addDoc(collection(db, "cities", ), {
+     items:items
+    }).then(()=>{
+      console.log("successfull")
+    });
+    
+    console.log(typeof(items))
+  }
 
   const style = StyleSheet.create({
     modalContainer: {
@@ -91,10 +108,9 @@ const addOrderToFireBase = async()=>{
                 width: 300,
                 position: "relative",
               }}
-
-              onPress={()=> {addOrderToFireBase()} }
+              onPress={addCollection}
             >
-              <Text style={{color:"white", fontSize: 20}}>Checkout</Text>
+              <Text style={{ color: "white", fontSize: 20 }}>Checkout</Text>
             </TouchableOpacity>
           </View>
         </View>
