@@ -23,23 +23,22 @@ export default function ViewCart() {
     currency: "FCFA",
   });
 
-  const addOrderToFireBase = () => {
-    // const db = getFirestore(app);
-    addDoc(orderRef, {
-      items: {items},
-      restaurantName: restaurantName,
-      // createdAt: db.FieldValue.serverTimestamp(),
-    }).then(() => {
-      console.log("Added");
-    });
+  // const addOrderToFireBase = () => {
+  //   // const db = getFirestore(app);
+  //   addDoc(orderRef, {
+  //     items: {items},
+  //     restaurantName: restaurantName,
+  //     // createdAt: db.FieldValue.serverTimestamp(),
+  //   }).then(() => {
+  //     console.log("Added");
+  //   });
 
-    console.log("working");
-    setModalVisible(false);
-  };
-
+  //   console.log("working");
+  //   setModalVisible(false);
+  // };
 
   const addCollection = async()=>{
-    const variable = format(Date.now(), "MMM");
+    // const variable = format(Date.now(), "MMM");
 
     // setDoc(doc(db, 'orders', variable)).collection(variable, "newCollection");
 
@@ -49,7 +48,7 @@ export default function ViewCart() {
       console.log("successfull")
     });
     
-    console.log(typeof(items))
+    console.log(items)
   }
 
   const style = StyleSheet.create({
