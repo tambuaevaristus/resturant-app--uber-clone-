@@ -15,6 +15,10 @@ export default function ViewCart() {
   const { items, restaurantName } = useSelector(
     (state) => state.cartReducer.selectedItems
   );
+
+  const cartItems = useSelector(
+    (state) => state.cartReducer.selectedItems.items
+  );
   const total = items
     .map((item) => Number(item.price.replace("FCFA", "")))
     .reduce((prev, curr) => prev + curr, 0);
@@ -43,13 +47,14 @@ export default function ViewCart() {
     // setDoc(doc(db, 'orders', variable)).collection(variable, "newCollection");
 
     await addDoc(collection(db, "orders", ), {
-     item:"hello world"
+    //  item:cartItems
     }).then(()=>{
       console.log("successfull")
     });
     
-    console.log(typeof(items.price))
+    console.log(cartItems)
   }
+  console.log(cartItems)
 
   const style = StyleSheet.create({
     modalContainer: {

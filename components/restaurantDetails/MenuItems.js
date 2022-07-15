@@ -77,7 +77,7 @@ const MenuItems = ({ restaurantName }) => {
       type: "ADD_TO_CART",
       payload: {
         ...item,
-         restaurantName: restaurantName,
+        restaurantName: restaurantName,
         checkboxValue: checkboxValue,
       },
     });
@@ -86,9 +86,8 @@ const MenuItems = ({ restaurantName }) => {
     (state) => state.cartReducer.selectedItems.items
   );
 
-  const isFoodInCart = (food, cartItems)=>(
-    Boolean(cartItems.find((item) =>item.title===food.title))
-  );
+  const isFoodInCart = (food, cartItems) =>
+    Boolean(cartItems.find((item) => item.title === food.title));
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
