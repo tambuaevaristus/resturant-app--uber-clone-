@@ -42,13 +42,13 @@ export default function ViewCart() {
 
     // setDoc(doc(db, 'orders', variable)).collection(variable, "newCollection");
 
-    await addDoc(collection(db, "cities", ), {
-     items:items
+    await addDoc(collection(db, "orders", ), {
+     item:"hello world"
     }).then(()=>{
       console.log("successfull")
     });
     
-    console.log(items)
+    console.log(typeof(items.price))
   }
 
   const style = StyleSheet.create({
